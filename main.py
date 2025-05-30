@@ -1,4 +1,4 @@
-# Paso 1: Importar librerías necesarias
+
 from google.colab import files
 import ipywidgets as widgets
 from IPython.display import display, clear_output
@@ -7,22 +7,22 @@ import os
 
 def main():
 
-  # Paso 2: Widget para subir archivo
+  # Widget para subir archivo
   upload_button = widgets.FileUpload(
       accept='.lis',  # solo acepta archivos .lis
       multiple=False
   )
   
-  # Paso 3: Botón para convertir a Excel
+  # Botón para convertir a Excel
   convert_button = widgets.Button(
       description='Convertir a Excel',
       button_style='success'
   )
   
-  # Paso 4: Zona para mostrar mensajes
+  # Zona para mostrar mensajes
   output = widgets.Output()
   
-  # Paso 5: Función para convertir .lis a .xlsx
+  # Función para convertir .lis a .xlsx
   def convertir_lis_a_excel(change):
       with output:
           clear_output()
@@ -52,10 +52,10 @@ def main():
           except Exception as e:
               print(f"❌ Error al convertir el archivo: {e}")
   
-  # Paso 6: Conectar botón a la función
+  # Conectar botón a la función
   convert_button.on_click(convertir_lis_a_excel)
   
-  # Paso 7: Mostrar widgets
+  # Mostrar widgets
   display(widgets.HTML("<h2>Convertidor de archivos .lis a .xlsx</h2>"))
   display(widgets.HTML("1. Sube el archivo .lis"))
   display(upload_button)
