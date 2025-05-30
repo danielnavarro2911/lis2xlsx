@@ -5,7 +5,7 @@ from IPython.display import display, clear_output
 import pandas as pd
 import os
 
-def main()
+def main():
 
   # Paso 2: Widget para subir archivo
   upload_button = widgets.FileUpload(
