@@ -56,7 +56,7 @@ def main():
   convert_button.on_click(convertir_lis_a_excel)
   
   # Mostrar widgets
-  display(widgets.HTML("<h2>Convertidor de archivos .lis a .xlsx</h2>"))
+
   display(widgets.HTML("1. Sube el archivo .lis"))
   display(upload_button)
   display(widgets.HTML("2. Haz clic para convertir y descargar"))
